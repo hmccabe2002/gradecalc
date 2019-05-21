@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<title>Grade Calculator</title>
+<style>
+
+</style>
+
+</head>
+<body>
+<h4>Grade Calculator</h4>
+    Current Grade:<br />
+    <input type="number" id="current_grade" />%
+    <br />
+    Desired Grade:<br />
+    <input type="number" id="desired_grade" />%
+    <br />
+    Assignment Weight:<br />
+    <input type="number" id="assignment_percentage" />%
+    <br />
+    <br />
+    <button onclick="calcGrade();">Calculate</button>
+    <br />
+    <br />
+    Minimum Grade:<br />
+    <span id="min_grade"></span>%
+    
+    <script>
+function calcGrade(){
+    var current_grade = document.getElementById('current_grade').value / 100;
+    var desired_grade = document.getElementById('desired_grade').value / 100;
+    var assignment_weight = document.getElementById('assignment_percentage').value / 100;
+    var min_grade = (desired_grade - (1 - assignment_weight) * current_grade) / assignment_weight;
+    min_grade *= 100;
+    min_grade = min_grade.toFixed(1);
+    document.getElementById("min_grade").innerHTML = min_grade;
+}
+</script>
+
+<h4>GPA Calculator</h4>
+
+<form name="grades">
+  <table>
+    <th>Class</th>
+    <th>Weight</th>
+    <th>Grade</th>
+    
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight1">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade1">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight2">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade2">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight3">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade3">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight4">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade4">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight5">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade5">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight6">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade6">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+      
+
+    <tr>
+      <td>
+        <input type="text">
+      </td>
+      <td>
+        <select name="weight7">
+          <option value="regular">Regular</option>
+          <option value="honors">Honors</option>
+          <option value="ap">AP</option>
+        </select>
+      </td>
+      <td>
+        <select name="grade7">
+          <option value="none" selected>Grade</option>
+          <option value="a+">A+</option>
+          <option value="a">A</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b">B</option>
+          <option value="b-">B-</option>
+          <option value="c+">C+</option>
+          <option value="c">C</option>
+          <option value="c-">C-</option>
+          <option value="d+">D+</option>
+          <option value="d">D</option>
+          <option value="d-">D-</option>
+          <option value="f">F below</option>
+        </select>
+      </td>
+    </tr>
+        <tr>
+      <td>
+        <input type="button" value="Calculate GPA" onClick="calculate()">
+      </td>
+      <td>
+        <input type="button" value="Reset" onClick="reset()">
+      </td>
+    </tr>
+  </table>
+</form>
+      
+<div id="gpa"></div>
+
+<script>
+var createWeightsArray = function(weight1, weight2, weight3, weight4, weight5, weight6, weight7, grade1, grade2, grade3, grade4, grade5, grade6, grade7) {
+  var weights = [];
+  
+  if(grade1 !== "none") {
+    weights.push(weight1)
+  } if(grade2 !== "none") {
+    weights.push(weight2)
+  } if(grade3 !== "none") {
+    weights.push(weight3)
+  } if(grade4 !== "none") {
+    weights.push(weight4)
+  } if(grade5 !== "none") {
+    weights.push(weight5)
+  } if(grade6 !== "none") {
+    weights.push(weight6)
+  } if(grade7 !== "none") {
+    weights.push(weight7)
+  } 
+  
+  return weights;
+};
+
+var createGradesArray = function(grade1, grade2, grade3, grade4, grade5, grade6, grade7) {
+  var grades = [];
+  
+  if(grade1 !== "none") {
+    grades.push(grade1)
+  } if(grade2 !== "none") {
+    grades.push(grade2)
+  } if(grade3 !== "none") {
+    grades.push(grade3)
+  } if(grade4 !== "none") {
+    grades.push(grade4)
+  } if(grade5 !== "none") {
+    grades.push(grade5)
+  } if(grade6 !== "none") {
+    grades.push(grade6)
+  } if(grade7 !== "none") {
+    grades.push(grade7)
+  } 
+  
+  if(grades.length > 0) {
+    return grades;
+  } else {
+    alert("Please enter at least one grade.")
+  }
+};
+
+var convert = function(grades) {
+  for(var i = 0; i < grades.length; i++) {
+    switch(grades[i]) {
+      case 'a+':
+        grades[i] = 4.3;
+        break;
+      case 'a':
+        grades[i] = 4.0;
+        break;
+      case 'a-':
+        grades[i] = 3.7;
+        break;
+      case 'b+':
+        grades[i] = 3.3;
+        break;
+      case 'b':
+        grades[i] = 3.0;
+        break;
+      case 'b-':
+        grades[i] = 2.7;
+        break;
+      case 'c+':
+        grades[i] = 2.3;
+        break;
+      case 'c':
+        grades[i] = 2.0;
+        break;
+      case 'c-':
+        grades[i] = 1.7;
+        break;
+      case 'd+':
+        grades[i] = 1.3;
+        break;
+      case 'd':
+        grades[i] = 1.0;
+        break;
+      case 'd-':
+        grades[i] = 0.7;
+        break;
+      case 'f':
+        grades[i] = 0.0;
+        break;
+    }
+  }
+  
+  return grades;
+};
+
+var weight = function(weights, grades) {
+  for(var i = 0; i < grades.length; i++) {
+    var num = grades[i].toString();
+    if(weights[i] === "honors") {
+      if(num[2] === "3") {
+        grades[i] = grades[i] + 0.4;
+      } else {
+        grades[i] = grades[i] + 0.3;
+      }
+    } else if(weights[i] === "ap") {
+      if(num[2] === "7") {
+        grades[i] = grades[i] + 0.6;
+      } else {
+        grades[i] = grades[i] + 0.7;
+      }
+    }
+  }
+  
+  return grades;
+};
+
+var averageGrades = function(grades) {
+  var x = 0;
+  
+  for(var i = 0; i < grades.length; i++) {
+    x = x + grades[i]
+  }
+  
+  return x / grades.length;
+};
+
+var printToDiv = function(gpa) {
+  document.getElementById("gpa").innerHTML = gpa
+};
+
+var calculate = function() {
+  var weight1 = document.grades.weight1.value;
+  var weight2 = document.grades.weight2.value;
+  var weight3 = document.grades.weight3.value;
+  var weight4 = document.grades.weight4.value;
+  var weight5 = document.grades.weight5.value;
+  var weight6 = document.grades.weight6.value;
+  var weight7 = document.grades.weight7.value;
+  
+  var grade1 = document.grades.grade1.value;
+  var grade2 = document.grades.grade2.value;
+  var grade3 = document.grades.grade3.value;
+  var grade4 = document.grades.grade4.value;
+  var grade5 = document.grades.grade5.value;
+  var grade6 = document.grades.grade6.value;
+  var grade7 = document.grades.grade7.value;
+  
+  var weights = createWeightsArray(weight1, weight2, weight3, weight4, weight5, weight6, weight7, grade1, grade2, grade3, grade4, grade5, grade6, grade7);
+  var grades = createGradesArray(grade1, grade2, grade3, grade4, grade5, grade6, grade7);
+  
+  grades = convert(grades);
+  
+  grades = weight(weights, grades);
+  
+  var gpa = averageGrades(grades);
+
+  printToDiv(gpa);
+};
+</script>
+</body>
+</html>
